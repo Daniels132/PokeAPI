@@ -1,0 +1,117 @@
+.principal
+{
+    display: flex;
+    flex-direction: column;
+}
+.nav
+{   
+    background-color:#191970;
+    height: 110px;
+    width: 100%;
+    border-style: outset; 
+    border-color:  #00008B;
+}
+.txt
+{
+    text-align: center;
+    color: white;
+}
+.tabelas 
+{
+   
+    height: 500px;
+}
+.nome
+{
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    text-align: left;
+    padding: 8px;
+
+}
+.altura
+{
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    text-align: left;
+    padding: 8px;
+
+}
+.tb
+{
+    font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.tr:nth-child(even)
+{
+    background-color: #dddddd;
+    border-style: solid;
+}
+
+body{
+    height: 100vh;
+    margin: 0px;
+    display: grid;
+    grid-template-rows: 120px 1fr 60px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "cabecalho" "conteudo" "rodape";
+}
+
+    
+.cabecalho{
+    grid-area: cabecalho;
+    background-color:#c01850;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    z-index: 1;
+    box-shadow: 0px 4px 9px -2px rgba(0, 0, 0, 0.75);
+}
+.conteudo{
+    grid-area: conteudo;
+    background-color:  #eeedf5e8;
+    padding:30px;
+}
+
+.dentro {
+    display:flex ;
+    position: relative;
+    height: 100%;
+    overflow: scroll;
+    background-color: white;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.pokemon{
+    height: 150px;
+    width: 250px;
+    background-color:white;
+    text-align: center;
+    box-shadow: 0px 4px 9px -2px rgba(0, 0, 0, 0.75);
+    margin: 10px;
+
+}
+.pokemon >h3{  margin: 0px;
+    color: white;
+    font-weight: 300;
+    font-size: 1.2rem;
+    padding:10px 10px;
+    background-color: #c01850;
+    box-shadow:0px 4px 9px -2px rgba(0, 0, 0, 0.75);
+}
+
+.rodape{
+    background-color: #c01850;
+    text-align: left;
+    padding: 10px;
+}
