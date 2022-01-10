@@ -15,12 +15,16 @@
         <div class="dentro">
                 <?php
                 $base="http://pokeapi.co/api/v2/pokemon/";
+                $imagem = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/";
+                // concatenar id pokemon + .png
                     for($id = 1; $id < 30; $id ++){
                         $data = file_get_contents($base.$id.'/');
                         $pokemon = json_decode($data);
+                        $concatena = $imagem.$id.'.png';
+                        $foto = $concatena;
                         echo'<div class="pokemon">';
                         echo '<h3>'.ucfirst($pokemon->name). '</h3>';
-                        echo '<p> teste </p>';
+                        echo '<img src = "'. $foto . '" class ="imagem">';
                         echo '</div>';
                   }
                 ?>
