@@ -17,18 +17,26 @@
                 $base="http://pokeapi.co/api/v2/pokemon/";
                 $imagem = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/";
                 // concatenar id pokemon + .png
-                    for($id = 1; $id < 30; $id ++){
+                    for($id = 1; $id < 50; $id ++){
                         $data = file_get_contents($base.$id.'/');
                         $pokemon = json_decode($data);
                         $concatena = $imagem.$id.'.png';
                         $foto = $concatena;
-                        echo'<div class="pokemon">';
-                        echo '<h3>'.ucfirst($pokemon->name). '</h3>';
-                        echo '<img src = "'. $foto . '" class ="imagem">';
+                        echo '<div class="pokemon">';
+                        echo '<div class = "nome">';
+                        echo '<button type= "button" class="btn" onclick="informacoes()"><strong>+</strong></button>';
+                        echo '<h3>'.ucfirst($pokemon->name).'</h3>';
+                        echo '</div>';
+                        echo '<img src = "'.$foto.'"class ="imagem">';
                         echo '</div>';
                   }
                 ?>
         </div>
+        <script>
+            function informacoes(){
+                varWindow = window.open ('popup.php', 'popup', "width=350, height=255, top=100, left=110, scrollbars=no " );
+            }
+        </script>
     </main>  
     <footer class="rodape">
     </footer>
