@@ -33,9 +33,7 @@
                 ?>
         </div>
         <script>
-            function informacoes(){
-                varWindow = window.open ('popup.php', 'popup', "width=350, height=255, top=100, left=110, scrollbars=no " );
-            }
+         
         </script>
     </main>  
     <footer class="rodape">
